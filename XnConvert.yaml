@@ -74,6 +74,7 @@ build-commands:
     "XnConvert/XnConvert.desktop";
     cat "XnConvert-desktop.txt" >> "XnConvert/XnConvert.desktop";
     install -p -D -m 0644 "XnConvert/XnConvert.desktop" -t "${FLATPAK_DEST}/share/applications/";
+  - install -p -D -m 0644 "${FLATPAK_ID}.appdata.xml" -t "${FLATPAK_DEST}/share/appdata/";
 post-install:
   - install -p -D -m 0644 "XnConvert"/*.txt -t "${FLATPAK_DEST}/share/doc/XnConvert/";
   - install -p -D -m 0644 "XnConvert/license.txt" -t "${FLATPAK_DEST}/share/licenses/XnConvert/";
